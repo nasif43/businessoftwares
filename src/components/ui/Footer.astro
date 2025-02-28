@@ -2,14 +2,12 @@
 import { Image } from "astro:assets";
 import Facebook from "../../assets/facebook.svg";
 import Linkedin from "../../assets/linkedin.svg";
-import Logo from "../../assets/logo-alt.svg";
-import Twitter from "../../assets/twitter.svg";
+import Logo from "../../../public/logo-alt.svg";
 import ShortForm from "../ui/ShortForm.astro";
 
 const logos = [
   { name: "Facebook", src: Facebook, link: "https://facebook.com" },
   { name: "Linkedin", src: Linkedin, link: "https://linkedin.com" },
-  { name: "Twitter", src: Twitter, link: "https://twitter.com" },
 ];
 
 const links = [
@@ -32,7 +30,7 @@ const links = [
         >
           <picture>
             <a href="#home">
-              <Image src={Logo} alt="Logo for Kreatif Brand" />
+              <Image src={Logo} alt="Business Softwares logo" />
             </a>
           </picture>
           <ul class="flex flex-col sm:flex-row gap-5">
@@ -40,7 +38,7 @@ const links = [
               links.map((link) => {
                 return (
                   <li class="text-center">
-                    <a class="underline" href={link.href}>
+                    <a href={link.href}>
                       {link.name}
                     </a>
                   </li>
